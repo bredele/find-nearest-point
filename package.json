@@ -2,8 +2,10 @@
   "name": "find-nearest-point",
   "version": "1.0.0",
   "description": "Finds the nearest point in a list of latitude/longitude coordinates to a given point.",
-  "main": "dist/cjs/index.js",
-  "files": ["dist"],
+  "main": "./dist/cjs/index.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "cmplr --type-check",
     "test": "node --test dist/cjs/index.test.js"
@@ -12,7 +14,12 @@
     "type": "git",
     "url": "git+https://github.com/bredele/find-nearest-point.git"
   },
-  "keywords": ["point", "near", "location", "distance"],
+  "keywords": [
+    "point",
+    "near",
+    "location",
+    "distance"
+  ],
   "author": "Olivier Wietrich",
   "license": "MIT",
   "bugs": {
@@ -22,5 +29,17 @@
   "devDependencies": {
     "@types/node": "^24.0.3",
     "cmplr": "^1.1.0"
+  },
+  "dependencies": {
+    "haversine-matrix": "^1.0.1"
+  },
+  "module": "./dist/esm/index.js",
+  "types": "./dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js",
+      "types": "./dist/types/index.d.ts"
+    }
   }
 }
