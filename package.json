@@ -1,6 +1,6 @@
 {
   "name": "find-nearest-point",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Finds the nearest point in a list of latitude/longitude coordinates to a given point.",
   "main": "./dist/cjs/index.js",
   "files": [

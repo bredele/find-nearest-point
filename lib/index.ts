@@ -1,5 +1,7 @@
 import { getHaversineDistance, Point } from "haversine-matrix";
 
+export { Point } from "haversine-matrix";
+
 export default (target: Point, points: Point[]): Point | null => {
   let nearestPoint = points[0];
   let minDistance = getHaversineDistance(target, points[0]);
